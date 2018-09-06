@@ -3,7 +3,7 @@ title: iOSHelp | Community of developers
 email: yugn27@gmail.com
 description: Community of developers to discover, share, and build better code.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://yugn27.github.io" # the base hostname & protocol for your site
+url: "http://ioshelp.tk" # the base hostname & protocol for your site
 google_analytics: "UA-XXXXXXXX-X"
 
 # User Settings
