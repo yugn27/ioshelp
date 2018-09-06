@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "SpriteKit ARKit CoreML Documentation"
+title: "TableViewController Documentation"
 date: 2018-09-02 12:26:40
 image: 'https://blog.tomasmahrik.com/wp-content/uploads/2015/06/swift.jpg'
-description: About SpriteKit ARKit CoreML Documentation
+description: About TableViewController Documentation
 category: 'Basic'
 tags:
 - Swift
 - iOS
 
-introduction: SpriteKit ARKit CoreML Documentation
+introduction: TableViewController Documentation
 ---
 
 
