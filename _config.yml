@@ -1,24 +1,24 @@
 # Site Settings
-title: IosHelp | Help for Ios Tranning
+title: iOSHelp | Community of developers
 email: yugn27@gmail.com
-description: Some text about your blog.
+description: Community of developers to discover, share, and build better code.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://yugn27.github.io" # the base hostname & protocol for your site
 google_analytics: "UA-XXXXXXXX-X"
 
 # User Settings
 username: iOSHelp
-user_description: Some text about you.
+user_description: Community of developers to discover, share, and build better code.
 disqus_username: disqus_username
 
 # Social Media
 # Remove the item if you don't need it
 github_username: github_username
-facebook_username: facebook_username
-twitter_username: twitter_username
-instagram_username: instagram_username
-linkedin_username: linkedin_username
-medium_username: medium_username
+#facebook_username: facebook_username
+#twitter_username: twitter_username
+#instagram_username: instagram_username
+#linkedin_username: linkedin_username
+#medium_username: medium_username
 
 # Build settings
 markdown: kramdown
