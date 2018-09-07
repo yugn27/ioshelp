@@ -35,7 +35,7 @@ pod init
 nano Podfile
 ```
 ```
-# Uncomment the next line to define a global platform for your project for frist time install
+
 platform :ios, '9.0'
 
 target 'Clima' do
@@ -48,6 +48,8 @@ target 'Clima' do
 
 end
 ```
+```
+
 
 ### Install third party lib's
 ```
