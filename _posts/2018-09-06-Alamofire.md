@@ -49,7 +49,10 @@ target 'Clima' do
 end
 ```
 ```
-
+ctrl+x
+Yes
+Enter
+```
 
 ### Install third party lib's
 ```
