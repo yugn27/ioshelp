@@ -2,7 +2,7 @@
 layout: post
 title: "WeatherApp"
 date: 2018-09-07 01:26:40
-image: 'https://blog.tomasmahrik.com/wp-content/uploads/2015/06/swift.jpg'
+image: '/assets/img/swift.jpg'
 description: About User's Current Location and Coordinates Documentation
 category: 'Beginners'
 tags:
