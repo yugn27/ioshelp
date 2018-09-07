@@ -2,7 +2,7 @@
 layout: post
 title: "SpriteKit ARKit CoreML Documentation"
 date: 2018-08-28 12:26:40
-image: 'https://blog.tomasmahrik.com/wp-content/uploads/2015/06/swift.jpg'
+image: '/assets/img/swift.jpg'
 description: About SpriteKit ARKit CoreML Documentation
 category: 'Basic'
 tags:
