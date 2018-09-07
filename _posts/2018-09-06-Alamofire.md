@@ -21,10 +21,32 @@ introduction: User's Current Location and Coordinates Documentation
 ```
 gem install cocoapods
 ```
+### Change Directory 
+```
+cd projectpath
+```
 
 ### Create Xcode project and set directory of project in terminal
 ```
 pod init
+```
+### open Podfile
+```
+nano Podfile
+```
+```
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Clima' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+pod 'Alamofire'
+    pod 'SwiftyJSON'
+  # Pods for Clima
+ 
+
+end
 ```
 
 ### Install third party lib's
