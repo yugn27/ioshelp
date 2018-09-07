@@ -22,7 +22,7 @@ adding CLLocationManagerDelegate in the class definition.
 
 ## To get a user's current location you need to declare and use in :
 ```
-l//
+//
 //  ViewController.swift
 //  WeatherApp
 //
@@ -41,18 +41,15 @@ class WeatherViewController: UIViewController ,CLLocationManagerDelegate {
     let WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather"
     let APP_ID = "e72ca729af228beabd5d20e3b7749713"
     
-
     //TODO: Declare instance variables here
-    
-
     
     //Pre-linked IBOutlets
     @IBOutlet weak var weatherIcon: UIImageView!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
 
-    
     let locationManager = CLLocationManager()
+    let weatherDataModel = WeatherDataModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,8 +65,6 @@ class WeatherViewController: UIViewController ,CLLocationManagerDelegate {
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
         }
-        getWeather()
-        
     }
     
     
@@ -79,18 +74,16 @@ class WeatherViewController: UIViewController ,CLLocationManagerDelegate {
         
         print(locValue.latitude)
         print(locValue.longitude)
-        let latitude = String(locValue.latitude)
+       let latitude = String(locValue.latitude)
         let longitude = String(locValue.longitude)
         
         let parms: [String : String] = ["lat" : latitude, "lon" : longitude, "appid" : APP_ID]
         
-      getWeather()
-        
+      getWeatherData(url: WEATHER_URL, parameter: parms)
         //mapView1.setRegion(viewRegion, animated: false)
         
         // self.map.setRegion(UIRegion, animated: true)
         //return (locValue.latitude)
-        
     }
     
     
@@ -100,46 +93,60 @@ class WeatherViewController: UIViewController ,CLLocationManagerDelegate {
     
     //Write the getWeatherData method here:
     
-
-    
-    
-    
+    func getWeatherData(url : String,parameter : [String: String]) {
+        Alamofire.request(url, method: .get, parameters: parameter).responseJSON{
+                response in
+                if response.result.isSuccess{
+                    let weatherJSON : JSON = JSON(response.result.value!)
+                    print(weatherJSON)
+                    self.updateWeth(json: weatherJSON)
+                }
+                else{
+                    print("Error")
+                }
+        }
+    }
     
     
     //MARK: - JSON Parsing
     /***************************************************************/
-   
     
     //Write the updateWeatherData method here:
-    
-
-    
+    func updateWeth(json : JSON)
+    {
+        let temp = json["main"]["temp"].doubleValue
+        
+        weatherDataModel.temp = Int(temp - 273.15)
+        weatherDataModel.city = json["name"].stringValue
+        weatherDataModel.cond = json["weather"][0]["id"].intValue
+        weatherDataModel.weatherIconName = weatherDataModel.updateWeatherIcon(condition: weatherDataModel.cond)
+        updateUIWithWeatherData()
+    }
     
     
     //MARK: - UI Updates
     /***************************************************************/
-    
-    
+
     //Write the updateUIWithWeatherData method here:
     
+    func updateUIWithWeatherData()
+    {
+        cityLabel.text = weatherDataModel.city
+        temperatureLabel.text = "\(weatherDataModel.temp)"
+        weatherIcon.image = UIImage(named: weatherDataModel.weatherIconName)
+    }
     
-    
-    
-    
+
     
     //MARK: - Location Manager Delegate Methods
     /***************************************************************/
     
-    
     //Write the didUpdateLocations method here:
-    
-    
+
     
     //Write the didFailWithError method here:
     
-    
-    
-
+   
     
     //MARK: - Change City Delegate methods
     /***************************************************************/
@@ -150,41 +157,9 @@ class WeatherViewController: UIViewController ,CLLocationManagerDelegate {
 
     
     //Write the PrepareForSegue Method here
-    
-    var main: Int = 0
-    
-    func getWeather() {
-        guard let url = URL(string: "https://samples.openweathermap.org/data/2.5/weather?q=Nagpur,uk&appid=b6907d289e10d714a6e88b30761fae22") else {return}
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            guard let dataResponse = data,
-                error == nil else {
-                    print(error?.localizedDescription ?? "Response Error")
-                    return }
-            do{
-                //here dataResponse received from a network request
-                let jsonResponse = try JSONSerialization.jsonObject(with:
-                    dataResponse, options: [])
-                print(jsonResponse) //Response result
-            } catch let parsingError {
-                print("Error", parsingError)
-            }
-        }
-        
-        task.resume()
-        
-    }
-    
-    
-    func updateWeth()
-    {
-        let temp =json["main"]["temp"].
-        
-    }
-    
-    
-    
-    
+
 }
+
 
 
 
@@ -192,7 +167,22 @@ class WeatherViewController: UIViewController ,CLLocationManagerDelegate {
 ````
 
 
-### In the info.plist you will have to add Privacy - Location Always Usage Description and your custom alert message like, AppName(Demo App) would like to use your current location.
+### In the info.plist.
+```
+<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>openweathermap.org</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+```
 
 
 Want to see something else added? <a href="https://yugn27.github.io/contact/">Open an issue.</a>
