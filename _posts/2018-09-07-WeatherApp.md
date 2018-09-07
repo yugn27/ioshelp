@@ -16,7 +16,7 @@ introduction: User's Current Location and Coordinates Documentation
 
 ## Code
 
-Import MapKit + CoreLocation
+Import CoreLocation
 
 adding CLLocationManagerDelegate in the class definition.
 
@@ -35,12 +35,13 @@ import Alamofire
 import SwiftyJSON
 
 
-class WeatherViewController: UIViewController ,CLLocationManagerDelegate {
+class WeatherViewController: UIViewController ,CLLocationManagerDelegate, ChangeCityDelegate {
     
     //Constants
     let WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather"
     let APP_ID = "e72ca729af228beabd5d20e3b7749713"
     //let APP_ID = "b6907d289e10d714a6e88b30761fae22"
+    
     
     //TODO: Declare instance variables here
     
@@ -154,18 +155,26 @@ class WeatherViewController: UIViewController ,CLLocationManagerDelegate {
     
     
     //Write the userEnteredANewCityName Delegate method here:
+    func userEnteredANewCityName(city: String){
+        let params: [String:String] = ["q": city ,"appid" : APP_ID]
+        getWeatherData(url: WEATHER_URL, parameter: params)
+    }
     
-
     
     //Write the PrepareForSegue Method here
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "changeCityName"{
+            let destinationVC = segue.destination as! ChangeCityViewController
+            destinationVC.delegate = self
+        }
+    }
+    
+    
 }
 
 
 
-
-
-````
+```
 
 ### WeatherDataModel.swift
 ```
@@ -239,6 +248,71 @@ class WeatherDataModel {
     
     
    
+}
+
+
+```
+
+### ChangeCityViewController.swift
+```
+//
+//  ChangeCityViewController.swift
+//  WeatherApp
+//
+//  Created by Himanshu on 11/05/2018.
+//  Copyright (c) 2018 Inspire Infotech Pvt Ltd. All rights reserved.
+//
+
+import UIKit
+
+
+//Write the protocol declaration here:
+
+protocol ChangeCityDelegate{
+    func userEnteredANewCityName(city: String)
+    
+}
+
+class ChangeCityViewController: UIViewController {
+    
+    
+    
+    
+    //Declare the delegate variable here:
+    var delegate: ChangeCityDelegate?
+    
+    //This is the pre-linked IBOutlets to the text field:
+    @IBOutlet weak var changeCityTextField: UITextField!
+    
+    
+    //This is the IBAction that gets called when the user taps on the "Get Weather" button:
+    @IBAction func getWeatherPressed(_ sender: AnyObject) {
+        
+        let cityName = changeCityTextField.text!
+        delegate?.userEnteredANewCityName(city: cityName)
+        self.dismiss(animated: true, completion: nil)
+        
+        //1 Get the city name the user entered in the text field
+        
+        
+        //2 If we have a delegate set, call the method userEnteredANewCityName
+        
+        
+        //3 dismiss the Change City View Controller to go back to the WeatherViewController
+        
+        
+    }
+    
+
+    
+
+    
+
+    //This is the IBAction that gets called when the user taps the back button. It dismisses the ChangeCityViewController.
+    @IBAction func backButtonPressed(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 ```
