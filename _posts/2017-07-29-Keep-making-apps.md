@@ -2,7 +2,7 @@
 layout: post
 title: "Keep making apps"
 date: 2018-08-28 12:26:40
-image: 'https://blog.tomasmahrik.com/wp-content/uploads/2015/06/swift.jpg'
+image: '/assets/img/swift.jpg'
 description: Apple Worldwide Developers Conference
 category: 'Basic'
 tags:
