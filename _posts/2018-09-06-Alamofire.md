@@ -19,7 +19,7 @@ introduction: User's Current Location and Coordinates Documentation
 
 ### Open Terminal and Type 
 ```
-gem install cocoapods
+sudo gem install cocoapods
 ```
 ### Change Directory 
 ```
