@@ -2,7 +2,7 @@
 layout: post
 title: "Using Alamofire in Xcode"
 date: 2018-09-06 12:26:40
-image: 'https://blog.tomasmahrik.com/wp-content/uploads/2015/06/swift.jpg'
+image: '/assets/img/swift.jpg'
 description: About Using Alamofire in Xcode Documentation
 category: 'Beginners'
 tags:
