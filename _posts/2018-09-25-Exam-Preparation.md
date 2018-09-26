@@ -128,6 +128,46 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }    
 }
 ```
+### What are the delegate methods of MapkitUI?
+
+Step 1:
+First we import MapKit as well as CoreLocation. The reason we need to implement CoreLocation is so that we can use it to request authorisation for using the users location.
+
+```
+import MapKit
+import CoreLocation
+```
+
+Create a property for a CLLocationManager as follows (which can be put just below the mapView IBOutlet):
+
+```
+
+let locationManager = CLLocationManager()
+```
+
+In viewDidLoad add the following:
+
+```
+ override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+       
+       let latitude = String(locValue.latitude)
+        let longitude = String(locValue.longitude)
+    }
+```
+
 
 
 Want to see something else added? <a href="https://yugn27.github.io/contact/">Open an issue.</a>
