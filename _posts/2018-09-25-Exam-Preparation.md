@@ -35,5 +35,28 @@ Development of Swift started in July 2010 by Chris Lattner, with the eventual co
 
 
 
+### Version History
+Date	Version
+2014-09-09	Swift 1.0
+2014-10-22	Swift 1.1
+2015-04-08	Swift 1.2
+2015-09-21	Swift 2.0
+2016-09-13	Swift 3.0
+2017-09-19	Swift 4.0
+2018-03-29	Swift 4.1
+2018-09-17	Swift 4.2
+
+### Cocoa
+Cocoa is Apple's native object-oriented application programming interface (API) for their operating system macOS.
+
+For iOS, tvOS, and watchOS, a similar API exists, named Cocoa Touch, which includes gesture recognition, animation, and a different set of graphical control elements. It is used in applications for Apple devices such as iPhone, iPad, iPod touch, Apple TV, and Apple Watch.
+
+Cocoa consists of the Foundation Kit, Application Kit, and Core Data frameworks, as included by the Cocoa.h header file, and the libraries and frameworks included by those, such as the C standard library and the Objective-C runtime.[1]
+
+Cocoa applications are typically developed using the development tools provided by Apple, specifically Xcode (formerly Project Builder) and Interface Builder (now part of Xcode), using the languages Objective-C or Swift. However, the Cocoa programming environment can be accessed using other tools, such as Clozure CL, LispWorks, Object Pascal, Python, Perl, Ruby, and AppleScript with the aid of bridge mechanisms such as PasCocoa, PyObjC, CamelBones, RubyCocoa, and a D/Objective-C Bridge. A Ruby language implementation named MacRuby, which removes the need for a bridge mechanism, was formerly developed by Apple, while Nu is a Lisp-like language that can be used with Cocoa with no bridge. It is also possible to write Objective-C Cocoa programs in a simple text editor and build it manually with GNU Compiler Collection (GCC) or clang from the command line or from a makefile.
+
+For end-users, Cocoa applications are those written using the Cocoa programming environment. Such applications usually have a distinctive feel, since the Cocoa programming environment automates many aspects of an application to comply with Apple's human interface guidelines.
+
+
 
 Want to see something else added? <a href="https://yugn27.github.io/contact/">Open an issue.</a>
