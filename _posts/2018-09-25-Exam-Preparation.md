@@ -175,6 +175,17 @@ In viewDidLoad add the following:
 ```
 
 
+
+
+### CocoaPods
+CocoaPods is an application level dependency manager for the Objective-C, Swift and any other languages that run on the Objective-C runtime, such as RubyMotion,[1] that provides a standard format for managing external libraries. It was developed by Eloy Durán and Fabio Pelosin, who continue to manage the project with the help and contributions of many others.[2] They began development in August 2011[3] and made the first public release[4] on September 1, 2011. CocoaPods is strongly inspired by a combination of the Ruby projects RubyGems and Bundler.
+
+CocoaPods focuses on source-based distribution of third party code and automatic integration into Xcode projects.
+
+CocoaPods runs from the command line and is also integrated in JetBrains' AppCode integrated development environment.[5] It installs dependencies (e.g. libraries) for an application by specification of dependencies rather than manual copying source files.[6] Besides installing from many different sources, a “master” spec repository—containing metadata for many Open-Source libraries—is maintained as a git repository and hosted on GitHub.[7] CocoaPods dependency resolution system is powered by Molinillo which is also used by other large project such as Bundler, RubyGems and Berkshelf.
+
+
+
 ### Display Alert in iOS
 ```
     let alertController = UIAlertController(title: "iOScreator", message:
