@@ -59,5 +59,13 @@ Cocoa applications are typically developed using the development tools provided 
 For end-users, Cocoa applications are those written using the Cocoa programming environment. Such applications usually have a distinctive feel, since the Cocoa programming environment automates many aspects of an application to comply with Apple's human interface guidelines.
 
 
+### Cocoa Touch
+Cocoa Touch is a UI framework for building software programs to run on iOS for the iPhone, iPod Touch, and iPad, watchOS for the Apple Watch, and tvOS for the fourth-generation Apple TV, from Apple Inc.
+
+Cocoa Touch provides an abstraction layer of iOS, the operating system for the iPhone, iPod Touch, and iPad. Cocoa Touch is based on the macOS Cocoa API toolset and, like it, is primarily written in the Objective-C language. Cocoa Touch allows the use of hardware and features that are not found in macOS computers and are thus unique to the iOS range of devices. Just like Cocoa, Cocoa Touch follows a Model-View-Controller (MVC) software architecture.
+
+Cocoa Touch contains a different set of graphical control elements to Cocoa. Tools for developing applications based on Cocoa Touch are included in the iOS SDK.
+
+
 
 Want to see something else added? <a href="https://yugn27.github.io/contact/">Open an issue.</a>
