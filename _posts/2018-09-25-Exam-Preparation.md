@@ -21,6 +21,7 @@ Facts
 - Xcode 10 is latest IDE for Apple dev
 - macOS High Sierra 10.13
 - macOS Mojave 10.14
+- The UIKit framework is used to develop application’s user interface for iOS.
 
 
 ### Swift
