@@ -175,5 +175,13 @@ In viewDidLoad add the following:
 ```
 
 
+### Display Alert in iOS
+```
+    let alertController = UIAlertController(title: "iOScreator", message:
+            "Hello, world!", preferredStyle: UIAlertControllerStyle.alert)
+    alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+        
+    self.present(alertController, animated: true, completion: nil)
+```
 
 Want to see something else added? <a href="https://yugn27.github.io/contact/">Open an issue.</a>
