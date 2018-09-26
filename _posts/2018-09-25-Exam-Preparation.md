@@ -67,5 +67,67 @@ Cocoa Touch provides an abstraction layer of iOS, the operating system for the i
 Cocoa Touch contains a different set of graphical control elements to Cocoa. Tools for developing applications based on Cocoa Touch are included in the iOS SDK.
 
 
+### Model–view–controller(MVC)
+Model–view–controller is an architectural pattern commonly used for developing user interfaces that divides an application into three interconnected parts. This is done to separate internal representations of information from the ways information is presented to and accepted from the user.[1][2] The MVC design pattern decouples these major components allowing for efficient code reuse and parallel development.
+
+Traditionally used for desktop graphical user interfaces (GUIs), this architecture has become popular for designing web applications and even mobile, desktop and other clients.[3] Popular programming languages like Java, C#, Ruby, PHP have MVC frameworks that are used in web application development straight out of the box.
+
+### What are the delegate methods of UITableview?
+tableView(_:viewForHeaderInSection:)
+tableView(_:viewForFooterInSection:)
+tableView(_:heightForHeaderInSection:)
+tableView(_:heightForFooterInSection:)
+tableView(_:willSelectRowAt:)
+tableView(_:didSelectRowAt:)
+tableView(_:willDeselectRowAt:)
+tableView(_:didDeselectRowAt:)
+
+
+Setup the delegate
+```
+  self.tableview.delegate = self
+```
+
+Most of the other part is pretty boilerplate code where we need to implement the numberOfRowsInSection and cellForRowAtIndexPath.
+```
+//
+//  TableViewController.swift
+//  Tableviewc
+//
+//  Created by yashn on 26/09/18.
+//  Copyright © 2018 yashn. All rights reserved.
+//
+
+import UIKit
+
+class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.workouts = manager.getWorkOuts()
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.workouts.count
+    }
+
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let workout = self.workouts[indexPath.row] as? Workout
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as? WorkoutCell!
+        cell!.textCell?.text = workout?.title
+        cell!.backgroundColor = workout?.color
+        cell!.countLabel.text = "\(indexPath.row+1)"
+        cell!.selectionStyle = UITableViewCellSelectionStyle.None
+        return cell!
+    }    
+}
+```
+
 
 Want to see something else added? <a href="https://yugn27.github.io/contact/">Open an issue.</a>
