@@ -17,6 +17,11 @@ introduction: Exams
 Facts
 - Multitasking for iOS was first released in June 2010 along with the release of iOS 4.
 - Dec 3, 2015 Swift Open Source.
+- 12.0 is stable iOS version (Sep 17, 2018)
+- Xcode 10 is latest IDE for Apple dev
+- macOS High Sierra 10.13
+- macOS Mojave 10.14
+
 
 ### Swift
 Swift is a general-purpose, multi-paradigm, compiled programming language developed by Apple Inc. for iOS, macOS, watchOS, tvOS, and Linux. Swift is designed to work with Apple's Cocoa and Cocoa Touch frameworks and the large body of existing Objective-C code written for Apple products. It is built with the open source LLVM compiler framework and has been included in Xcode since version 6. On platforms other than Linux,[10] it uses the Objective-C runtime library which allows C, Objective-C, C++ and Swift code to run within one program.[11]
