@@ -195,4 +195,15 @@ CocoaPods runs from the command line and is also integrated in JetBrains' AppCod
     self.present(alertController, animated: true, completion: nil)
 ```
 
+### Convert Int to String in Swift
+```
+let x : Int = 42
+var myString = String(x)
+```
+
+```
+LatView.text = String(Latg)
+LonView.text = String(Long)
+```
+
 Want to see something else added? <a href="https://yugn27.github.io/contact/">Open an issue.</a>
