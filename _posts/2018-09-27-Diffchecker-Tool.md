@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Exam"
+title: "Diffchecker"
 date: 2018-09-27 12:26:40
 image: '/assets/img/swift.jpg'
-description: Exams
+description: Tools
 category: 'Beginners'
 tags:
 - Swift
@@ -18,7 +18,7 @@ Diffchecker is a diff tool to compare text differences between two text files.
 Enter the contents of two files and click Find Difference
 
 
-https://www.diffchecker.com/
+
 
 <a href="https://www.diffchecker.com/">https://www.diffchecker.com/</a>
 
