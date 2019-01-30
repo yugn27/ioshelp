@@ -42,9 +42,9 @@ You create a custom subclass of UITableViewController for each table view that y
 ```
 //
 //  ViewController.swift
-//  api tests
+//  TableView Program
 //
-//  Created by Yash Nayak on 20/01/19.
+//  Created by Yash Nayak on 20/08/18.
 //  Copyright © 2019 Yash Nayak. All rights reserved.
 //
 
