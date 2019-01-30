@@ -33,13 +33,62 @@ When the table view is about to appear the first time it’s loaded, the table-v
 
 When the table view has appeared, the controller flashes the table view’s scroll indicators. The UITableViewController class implements this in the superclass method viewDidAppear(_:).
 
-It implements the superclass method setEditing(_:animated:) so that if a user taps an Edit|Done button in the navigation bar, the controller toggles the edit mode of the table.
+
 
 You create a custom subclass of UITableViewController for each table view that you want to manage. When you initialize the controller in init(style:), you must specify the style of the table view (plain or grouped) that the controller is to manage. Because the initially created table view is without table dimensions (that is, number of sections and number of rows per section) or content, the table view’s data source and delegate—that is, the UITableViewController object itself—must provide the table dimensions, the cell content, and any desired configurations (as usual). You may override loadView() or any other superclass method, but if you do be sure to invoke the superclass implementation of the method, usually as the first method call.
 
 <a href="https://developer.apple.com/documentation/uikit/uitableviewcontroller">https://developer.apple.com/documentation/uikit/uitableviewcontroller</a>
 
+```
+//
+//  ViewController.swift
+//  api tests
+//
+//  Created by Yash Nayak on 20/01/19.
+//  Copyright © 2019 Yash Nayak. All rights reserved.
+//
 
+import UIKit
+
+class ViewController: UIViewController ,UITableViewDelegate, UITableViewDataSource{
+    
+   
+    let names: [String] = ["Yash", "Sahil", "Prakshr", "Sudanshu", "Vaibhav"]
+    let cellReuseIdentifier = "cell"
+    
+
+    @IBOutlet var tableView: UITableView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+    
+   
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.names.count
+    }
+    
+  
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as UITableViewCell!
+        
+        cell.textLabel?.text = self.names[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("You tapped cell number \(indexPath.row).")
+    }
+}
+    
+  
+
+```
 
 
 Want to see something else added? <a href="https://yugn27.github.io/contact/">Open an issue.</a>
