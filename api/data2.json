@@ -64,5 +64,71 @@
       "StateName":"Goa",
       "CountryID":"105",
       "displayorder":"6"
+   },
+   {
+      "ID":"1566",
+      "StateName":"Gujarat",
+      "CountryID":"105",
+      "displayorder":"7"
+   },
+   {
+      "ID":"1567",
+      "StateName":"Haryana",
+      "CountryID":"105",
+      "displayorder":"8"
+   },
+   {
+      "ID":"1568",
+      "StateName":"Himachal Pradesh",
+      "CountryID":"105",
+      "displayorder":"9"
+   },
+   {
+      "ID":"1569",
+      "StateName":"Jammu and Kashmir",
+      "CountryID":"105",
+      "displayorder":"10"
+   },
+   {
+      "ID":1570,
+      "StateName":"Jharkhand",
+      "CountryID":105,
+      "displayorder":11
+   },
+   {
+      "ID":"1571",
+      "StateName":"Karnataka",
+      "CountryID":"105",
+      "displayorder":"12"
+   },
+   {
+      "ID":"1572",
+      "StateName":"Kerala",
+      "CountryID":"105",
+      "displayorder":"13"
+   },
+   {
+      "ID":"1573",
+      "StateName":"Lakshadweep",
+      "CountryID":"105",
+      "displayorder":"34"
+   },
+   {
+      "ID":"1574",
+      "StateName":"Madhya Pradesh",
+      "CountryID":"105",
+      "displayorder":"14"
+   },
+   {
+      "ID":"1575",
+      "StateName":"Maharashtra",
+      "CountryID":"105",
+      "displayorder":"15"
+   },
+   {
+      "ID":"1576",
+      "StateName":"Manipur",
+      "CountryID":"105",
+      "displayorder":"16"
    }
 ]
