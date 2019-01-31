@@ -10,5 +10,59 @@
       "StateName":"Andhra Pradesh",
       "CountryID":"105",
       "displayorder":"1"
+   },
+   {
+      "ID":"1557",
+      "StateName":"Arunachal Pradesh",
+      "CountryID":"105",
+      "displayorder":"2"
+   },
+   {
+      "ID":"1558",
+      "StateName":"Assam",
+      "CountryID":"105",
+      "displayorder":"3"
+   },
+   {
+      "ID":1559,
+      "StateName":"Bihar",
+      "CountryID":105,
+      "displayorder":4
+   },
+   {
+      "ID":"1560",
+      "StateName":"Chandigarh",
+      "CountryID":"105",
+      "displayorder":"31"
+   },
+   {
+      "ID":"1561",
+      "StateName":"Chhattisgarh",
+      "CountryID":"105",
+      "displayorder":"5"
+   },
+   {
+      "ID":"1562",
+      "StateName":"Dadra and Nagar Haveli",
+      "CountryID":"105",
+      "displayorder":"32"
+   },
+   {
+      "ID":"1563",
+      "StateName":"Daman and Diu",
+      "CountryID":"105",
+      "displayorder":"33"
+   },
+   {
+      "ID":"1564",
+      "StateName":"Delhi",
+      "CountryID":"105",
+      "displayorder":"29"
+   },
+   {
+      "ID":"1565",
+      "StateName":"Goa",
+      "CountryID":"105",
+      "displayorder":"6"
    }
 ]
