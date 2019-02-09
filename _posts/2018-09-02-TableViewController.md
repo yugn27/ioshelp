@@ -1,23 +1,21 @@
 ---
 layout: post
-title: "TableViewController Documentation"
+title: "TableView"
 date: 2018-09-02 12:26:40
 image: '/assets/img/swift.jpg'
-description: About TableViewController Documentation
+description: About TableView
 category: 'Basic'
 tags:
 - Swift
 - iOS
 
-introduction: TableViewController Documentation
+introduction: TableView
 ---
 
 
 
 
-## TableViewController
-
-
+## TableView
 
 ### UITableViewController
 A view controller that specializes in managing a table view.
