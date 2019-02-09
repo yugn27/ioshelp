@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "API-Technical Assignment"
-date: 2018-09-25 12:26:40
+date: 2018-10-01 12:26:40
 image: '/assets/img/swift.jpg'
 description: Exams
 category: 'Beginners'
@@ -31,6 +31,5 @@ Also pls share xcode project file of this assignment on yugn27@gmail.com. You ar
 Try to implement project using MVC design pattern.
 
 Thanks and Regards
-Yash Nayak
 
 Want to see something else added? <a href="https://yugn27.github.io/contact/">Open an issue.</a>
