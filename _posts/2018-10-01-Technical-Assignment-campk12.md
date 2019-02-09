@@ -19,7 +19,7 @@ introduction: Campk12 Technical-Assignment
 
 Hi User,
 
-See PDF attached below for a mockup / interactions of the P2P Video Chat App you need to implement for your coding assignment.
+See Image attached above for a mockup / interactions of the P2P Video Chat App you need to implement for your coding assignment.
 
 You will be using Firebase to store user info / call state, you'll be using the OpenTok iOS SDK for p2p video chat.
 
