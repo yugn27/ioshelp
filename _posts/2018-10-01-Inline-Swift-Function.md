@@ -31,4 +31,27 @@ pubView.frame = CGRect(x: 0, y: 0, width: Int(100 * UIScreen.main.bounds.width/1
 view.addSubview(pubView)
 ```
 
+
+```
+//Segment Control
+@IBOutlet weak var RoomSelectoutlet: UISegmentedControl!
+
+@IBAction func RoomtypeSeg(_ sender: UISegmentedControl) {
+        switch RoomSelectoutlet.selectedSegmentIndex
+        {
+        case 0:
+            RoomType = "Conference";
+        case 1:
+            RoomType = "Meeting";
+        case 2:
+            RoomType = "Training";
+        case 3:
+            RoomType = "Auditorium";
+        default:
+            break;
+        }
+}
+    
+```
+
 Want to see something else added? <a href="https://yugn27.github.io/contact/">Open an issue.</a>
