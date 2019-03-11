@@ -54,4 +54,26 @@ view.addSubview(pubView)
     
 ```
 
+
+```
+//Check Box
+
+// check box outlet
+@IBOutlet weak var InpectionTestingoutlet: Checkbox!
+
+//purpose of visit
+var InpectionTestingvar = "No"
+    
+    
+//purpose of visit
+                    if (InpectionTestingoutlet.isChecked == true)
+                    {
+                        InpectionTestingvar = "Yes";
+                    }
+                    else{
+                        InpectionTestingvar = "No";
+                    }
+
+```
+
 Want to see something else added? <a href="https://yugn27.github.io/contact/">Open an issue.</a>
