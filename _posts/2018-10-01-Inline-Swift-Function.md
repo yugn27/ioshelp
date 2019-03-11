@@ -76,4 +76,12 @@ var InpectionTestingvar = "No"
 
 ```
 
+
+```
+//Check box validation
+ if (InpectionTestingoutlet.isChecked == false )
+ {
+     myalert("Purpose of visit", "Select atleast one item")
+ }
+```
 Want to see something else added? <a href="https://yugn27.github.io/contact/">Open an issue.</a>
