@@ -57,7 +57,7 @@ view.addSubview(pubView)
 
 ```
 //Check Box
-
+// Checkbox Swwift file can be found here https://github.com/Apple-Inspire/Checkbox/blob/master/Checkbox.swift
 // check box outlet
 @IBOutlet weak var InpectionTestingoutlet: Checkbox!
 
