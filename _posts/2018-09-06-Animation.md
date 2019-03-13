@@ -33,5 +33,22 @@ func AnimateItem (duration: Double, delay: Double, object: UIView) {
     }
 ```
 
+```
+// Fadinf animation to parent view
+// Calling function in viewdidload
+Tick()
+
+// Function 
+ func Tick () {
+        timeLabel.text = Utilities().GetCurrentTime()
+      UIView.animate(withDuration: 0.95, delay: 0, options: .curveEaseOut, animations: {
+               self.view.alpha = 0.5
+           }) { (true) in
+            self.view.alpha = 1.0
+        }
+    }
+
+```
+
 
 Want to see something else added? <a href="https://yugn27.github.io/contact/">Open an issue.</a>
