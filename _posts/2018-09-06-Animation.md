@@ -19,7 +19,7 @@ introduction: Using Animation in Swift
 
 
 ```
-// Calling Function
+// Calling Function (left to right)
 AnimateItem(duration: 0.5, delay: 0.6, object: lab4)
 
 // Function
@@ -34,7 +34,7 @@ func AnimateItem (duration: Double, delay: Double, object: UIView) {
 ```
 
 ```
-// Fadinf animation to parent view
+// FadeIn FadeOut effect animation to parent view
 // Calling function in viewdidload
 Tick()
 
