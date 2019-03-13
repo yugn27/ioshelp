@@ -20,7 +20,11 @@ introduction: TableView
 ### UITableViewController
 A view controller that specializes in managing a table view and displaying data from swift file to UI view controroller.
 
-
+```
+// Table View Delegate method
+cellForRowAt
+numberOfRowsInSection
+```
 
 ```
 //
