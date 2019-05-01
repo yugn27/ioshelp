@@ -15,6 +15,6 @@ introduction: Auto Height TableView Cells
 
 # Auto Height TableView Cell
 
-![PlaceIt](/assets/img/Auto_height_cells.png')
+![PlaceIt](/assets/img/Auto_height_cells.png)
 
 Want to see something else added? <a href="https://yugn27.github.io/contact/">Open an issue.</a>
